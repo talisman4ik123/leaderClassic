@@ -1,0 +1,68 @@
+.investments {
+    overflow: hidden;
+    &__inner {
+        padding-bottom: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__caption {
+        font-size: 25px;
+        line-height: 158.2%;
+        text-align: center;
+        max-width: 500px;
+        margin-bottom: 120px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 100px;
+        }
+    }
+
+    &__span {
+        font-size: 21px;
+        line-height: 130.2%;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+
+    &__subtitle {
+        font-size: 30px;
+        line-height: 130.2%;
+        font-weight: 500;
+        max-width: 300px;
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 158.7%;
+        max-width: 377px;
+    }
+
+    &__number {
+        position: absolute;
+        right: 0;
+        top: -80px;
+        z-index: 10;
+        font-weight: bold;
+        font-size: 200px;
+        line-height: 117.2%;
+        background: linear-gradient(rgba(61, 79, 59, 0.37), rgba(61, 79, 59, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

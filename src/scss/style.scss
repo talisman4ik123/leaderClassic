@@ -1,0 +1,16 @@
+@use "sass:math";
+
+@import "base/mixins";
+@import "base/fonts";
+@import "base/icons";
+@import "base/vars";
+@import "base/reset";
+@import "base/global";
+
+//@import "libs/";
+
+@import "main/header";
+@import "main/tools";
+@import "main/investments";
+@import "main/bonus";
+@import "main/footer";
