@@ -1,0 +1,140 @@
+.questions {
+
+    &__inner {
+        padding-bottom: 150px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__title {
+        font-size: 60px;
+        line-height: 100%;
+        margin-bottom: 20px;
+        max-width: 600px;
+        margin-bottom: 25px;
+    }
+
+    &__caption {
+        font-size: 22px;
+        line-height: 138.7%;
+        max-width: 340px;
+    }
+
+    &__btn {
+        padding: 30px 48px;
+        max-width: 380px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        width: 710px;
+        justify-content: space-between;
+        padding-left: 100px;
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+
+        &::before {
+            content: '?';
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50%;
+            background: #24242D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            transition: background .4s ease;
+        }
+
+        &--active {
+            &::before {
+                background: #6BA758;
+            }
+
+            .questions__text {
+                display: block;
+            }
+        }
+    }
+
+    &__content {
+        padding-right: 50px;
+    }
+
+    &__subtitle {
+        font-size: 30px;
+        line-height: 120%;
+        font-weight: 400;
+    }
+
+    &__text {
+        display: none;
+        margin-top: 40px;
+        font-size: 16px;
+        line-height: 130%;
+        max-width: 500px;
+    }
+}
+
+.read-more {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 3px solid #272932;
+    transition: border .4s ease;
+
+    &::before {
+        color: #272932;
+        font-size: 34px;
+        margin-top: 5px;
+        transition: color .4s ease, transform .4s ease;
+    }
+
+    &--active {
+        border: 3px solid #62666F;
+        &::before {
+            color: #62666F;
+            transform: rotate(540deg);
+            margin-top: -2px;
+        }
+    }
+}
+
+.tab-transform {
+    animation-name: transform;
+    animation-duration: 1s;
+}
+
+@keyframes transform {
+    from {transform: translate(0px, -50px);
+    opacity: 0.5;}
+    to {transform: translate(0px, 0px);
+    opacity: 1;}
+}
+
+.circle-blur {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(180deg, #98C269 0%, #9EDFB6 100%);
+    filter: blur(200px);
+    top: 250px;
+    left: -200px;
+}
